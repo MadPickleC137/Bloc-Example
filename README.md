@@ -6,7 +6,7 @@
 Это первый мой опыт создания приложения на flutter с использование BloC
 
 Запросы осуществляются к открытому апи
-[Super Hero Api](https://superheroapi.com/api)
+[Super Hero Api](https://superheroapi.com/#biography)
 
 # Используемые библиотеки
 
