@@ -85,18 +85,19 @@ class WorkWidget extends StatelessWidget {
             );
           } else
             return Shimmer.fromColors(
-                baseColor: Color(0x792B333A),
-                highlightColor: Color(0xFF293946),
-                child: Container(
-                  width: double.infinity,
-                  margin: EdgeInsets.only(top: 20, left: 20, right: 20),
-                  height: 100,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                      color: Color(0xFF293946)),
-                ));
+              baseColor: Color(0x792B333A),
+              highlightColor: Color(0xFF293946),
+              child: Container(
+                width: double.infinity,
+                margin: EdgeInsets.only(top: 20, left: 20, right: 20),
+                height: 100,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                    color: Color(0xFF293946)),
+              ),
+            );
         },
       ),
     );
@@ -105,7 +106,7 @@ class WorkWidget extends StatelessWidget {
 
 class PowerstatsWidget extends StatelessWidget {
   int heroId;
-
+  int _countShimmers = 4;
   PowerstatsWidget({
     Key? key,
     required this.heroId,
@@ -186,66 +187,22 @@ class PowerstatsWidget extends StatelessWidget {
           } else
             return Column(
               children: [
-                Shimmer.fromColors(
-                    baseColor: Color(0x792B333A),
-                    highlightColor: Color(0xFF293946),
-                    child: Container(
-                      width: 200,
-                      margin: EdgeInsets.only(
-                        top: 4,
-                      ),
-                      height: 20,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                          color: Color(0xFF293946)),
-                    )),
-                Shimmer.fromColors(
-                    baseColor: Color(0x792B333A),
-                    highlightColor: Color(0xFF293946),
-                    child: Container(
-                      width: 200,
-                      margin: EdgeInsets.only(
-                        top: 4,
-                      ),
-                      height: 20,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                          color: Color(0xFF293946)),
-                    )),
-                Shimmer.fromColors(
-                    baseColor: Color(0x792B333A),
-                    highlightColor: Color(0xFF293946),
-                    child: Container(
-                      width: 200,
-                      margin: EdgeInsets.only(
-                        top: 4,
-                      ),
-                      height: 20,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                          color: Color(0xFF293946)),
-                    )),
-                Shimmer.fromColors(
-                    baseColor: Color(0x792B333A),
-                    highlightColor: Color(0xFF293946),
-                    child: Container(
-                      width: 200,
-                      margin: EdgeInsets.only(
-                        top: 4,
-                      ),
-                      height: 20,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                          color: Color(0xFF293946)),
-                    )),
+                for (int i = 0; i < _countShimmers; i++)
+                  Shimmer.fromColors(
+                      baseColor: Color(0x792B333A),
+                      highlightColor: Color(0xFF293946),
+                      child: Container(
+                        width: 200,
+                        margin: EdgeInsets.only(
+                          top: 4,
+                        ),
+                        height: 20,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(10),
+                            ),
+                            color: Color(0xFF293946)),
+                      )),
               ],
             );
         },
