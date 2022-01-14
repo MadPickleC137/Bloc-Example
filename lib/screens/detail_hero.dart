@@ -138,50 +138,10 @@ class PowerstatsWidget extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 2),
-                  child: Text(
-                    "Durability: ${powerstats.durability}",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 14.0,
-                        color: Color(0xFFCCCFD4),
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 2),
-                  child: Text(
-                    "Combat: ${powerstats.combat}",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 14.0,
-                        color: Color(0xFFCCCFD4),
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 2),
-                  child: Text(
-                    "Power: ${powerstats.power}",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 14.0,
-                        color: Color(0xFFCCCFD4),
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 2),
-                  child: Text(
-                    "Intelligence: ${powerstats.intelligence}",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 14.0,
-                        color: Color(0xFFCCCFD4),
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
+                statItemWidget("Durability: ${powerstats.durability}"),
+                statItemWidget("Combat: ${powerstats.combat}"),
+                statItemWidget("Power: ${powerstats.power}"),
+                statItemWidget("Intelligence: ${powerstats.intelligence}"),
               ],
             );
           } else
@@ -206,6 +166,20 @@ class PowerstatsWidget extends StatelessWidget {
               ],
             );
         },
+      ),
+    );
+  }
+
+  Widget statItemWidget(String stat) {
+    return Container(
+      margin: EdgeInsets.only(top: 2),
+      child: Text(
+        stat,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+            fontSize: 14.0,
+            color: Color(0xFFCCCFD4),
+            fontWeight: FontWeight.bold),
       ),
     );
   }
